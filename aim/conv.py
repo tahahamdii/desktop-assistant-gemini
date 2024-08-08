@@ -13,3 +13,6 @@ def converse(query):
     result = llm.invoke(prompt)
     #print("Model response: " + result.content)
     return result.content
+
+if __name__ == '__main__':
+    converse("tell me about toxic love.")
