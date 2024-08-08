@@ -8,3 +8,15 @@ import threading
 from aim.vision import describe_image
 import webbrowser
 from audio.speech import speak, listen
+
+
+def open_cmd():
+    os.system('start cmd')
+
+def open_camera():
+    sp.run('start microsoft.windows.camera:', shell=True)
+
+def open_website():
+    speak('Which website would you like to open?')
+    url = listen().lower()
+    webbrowser.open(url)
