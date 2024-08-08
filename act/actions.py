@@ -28,3 +28,11 @@ def take_screenshot():
     screenshot.save(media_dir + "/" + screenshot_file)
     print("Screenshot saved as: " +  screenshot_file)
     speak("Screenshot saved as " + screenshot_file)
+
+
+def start_screen_record():
+    recording_thread = threading.Thread(target=record_screen)
+    recording_thread.start()
+
+def stop_screen_record():
+    stop_recording()
