@@ -1,16 +1,12 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from audio.speech import speak, listen
+from decouple import config
+from aim.conv import converse
+from act.actions import open_notepad, open_word, open_excel, open_ppt, open_calculator, open_cmd, take_screenshot, start_screen_record, stop_screen_record, open_camera, camera_vision, open_website
+import threading
+import ui.gui as gui
+import time
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
