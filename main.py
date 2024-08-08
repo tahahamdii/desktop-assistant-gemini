@@ -6,7 +6,9 @@ import threading
 import ui.gui as gui
 import time
 
+BOT_NAME = config("VA_NAME")
 
+exit_event = threading.Event()
 if __name__ == '__main__':
     print_hi('PyCharm')
 
