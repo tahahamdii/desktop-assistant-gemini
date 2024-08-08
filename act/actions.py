@@ -20,3 +20,11 @@ def open_website():
     speak('Which website would you like to open?')
     url = listen().lower()
     webbrowser.open(url)
+
+def take_screenshot():
+    media_dir=config("MEDIA_DIR")
+    screenshot_file=config("SCREENSHOT_FILE")
+    screenshot = ImageGrab.grab()
+    screenshot.save(media_dir + "/" + screenshot_file)
+    print("Screenshot saved as: " +  screenshot_file)
+    speak("Screenshot saved as " + screenshot_file)
