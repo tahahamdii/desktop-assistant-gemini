@@ -21,3 +21,6 @@ def describe_image():
     result = vision_model.invoke([message])
     print(result.content)
     return result.content
+
+if __name__ == '__main__':
+    describe_image()
