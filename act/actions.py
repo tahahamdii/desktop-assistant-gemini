@@ -36,3 +36,12 @@ def start_screen_record():
 
 def stop_screen_record():
     stop_recording()
+
+
+def camera_vision():
+    media_dir=config("MEDIA_DIR")
+    screenshot_file=config("SCREENSHOT_FILE")
+    screenshot = ImageGrab.grab()
+    screenshot.save(media_dir + "/" + screenshot_file)
+
+    speak(describe_image())
